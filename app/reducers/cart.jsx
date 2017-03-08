@@ -70,7 +70,7 @@ export const convertCartToOrderAuth = (cartId, details) =>
       })
       .then(res => {
         if (res.data.length>1){
-          dispatch(setCart(initialState))
+          setCurrentCart(getState().auth.id)
           }
         }
       )
