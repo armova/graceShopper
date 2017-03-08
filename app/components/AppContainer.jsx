@@ -3,10 +3,7 @@ import {Tabs, Tab} from 'material-ui'
 import { browserHistory } from 'react-router'
 import {connect} from 'react-redux'
 import WhoAmI from './WhoAmI'
-import JumbotronContainer from './JumbotronContainer'
 import RaisedButton from 'material-ui/RaisedButton'
-import Dialog from 'material-ui/Dialog'
-import FlatButton from 'material-ui/FlatButton'
 
 const navStyle = {
   textAlign: 'center',
@@ -50,25 +47,23 @@ class AppContainer extends Component {
   }
 
 
-
   render() {
 
     return (
             <div>
-            <div>
-            <h1 className="header">THE ART SHOP</h1>
-            <div className="login-sign-up-header">
-            {this.props.user ? <WhoAmI /> : <div>
-            <RaisedButton label="Sign Up" style={buttonStyle} onClick={this.onSignUpClick} />
-            <RaisedButton label="Log in" style={buttonStyle} onClick={this.onLogInClick} /> </div>} </div>
-             </div> 
+              <div>
+                <h1 className="header">THE ART SHOP</h1>
+                  <div className="login-sign-up-header">
+                  {this.props.user ? <WhoAmI /> :
+                    <div><RaisedButton label="Sign Up" style={buttonStyle} onClick={this.onSignUpClick} />
+                         <RaisedButton label="Log in" style={buttonStyle} onClick={this.onLogInClick} /> </div>}
+                  </div>
+               </div>
               <Tabs style={navStyle}>
-                <Tab label="Home"  style={navBar} onActive={()=> this.onClick('/products')}/>
-                <Tab label="Cart" style={navBar} onActive={()=> this.onClick('/cart')} />
-                {this.props.user ? <Tab label="Account" style={navBar} onActive={()=> this.onClick(`/accounts/${this.props.user.id}`)}/> : ''}
+                <Tab label="Home"  style={navBar} onActive={() => this.onClick('/products')} />
+                <Tab label="Cart" style={navBar} onActive={() => this.onClick('/cart')} />
+                {this.props.user ? <Tab label="Account" style={navBar} onActive={() => this.onClick(`/accounts/${this.props.user.id}`)} /> : ''}
               </Tabs>
-
-
             </div>
     )
   }
