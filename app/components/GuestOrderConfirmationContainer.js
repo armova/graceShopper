@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 export default function GuestOrderConfirmationContainer () {
 
   const style = {
-    width: 500,
+    width: '100%',
     margin: 20
   }
 
@@ -22,7 +22,7 @@ export default function GuestOrderConfirmationContainer () {
       <h1 className="checkout-thankyou">Thank you for your order!</h1>
       <Subheader style={headerStyle}>Please check your email for order details</Subheader>
     </Paper>
-    <RaisedButton label="Back to store" primary={true} style={{margin: 20}} onClick={() => browserHistory.push('/products')} />
+    <RaisedButton label="Back to store" default={true} style={{margin: 20}} onClick={() => browserHistory.push('/products')} />
     </div>
     </div>
   )

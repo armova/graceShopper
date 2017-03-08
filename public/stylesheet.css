@@ -131,6 +131,11 @@
 	font-family:'Alfa Slab One', cursive;
 	font-size: 40px;
 }
+
+.shopping-cart-container{
+	width:100%;
+	text-align: center;
+}
 .shopping-cart-footer{
 	text-align: center;
 	padding-top: 25px;
@@ -175,8 +180,10 @@
 
 .checkout-thankyou{
 	text-align: center;
+	padding-top: 25px;
 	font-family:'Alfa Slab One', cursive;
 	font-size: 40px;
+	width:100%;
 }
 
 .account-header{

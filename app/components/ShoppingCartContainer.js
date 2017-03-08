@@ -44,7 +44,7 @@ checkoutHandler () {
 	render() {
 	 if (this.props.productLines && this.props.productLines.length){
 				return (
-					<div>
+					<div className="shopping-cart-container">
 						<ShoppingCartComponent {...this.props} onClick={this.clickHandler}  />
 			            <h1 className="shopping-cart-footer">Total Cost: ${this.props.productLines && this.props.productLines.reduce(function(acc, val) {
 			              return acc + val.totalCost
