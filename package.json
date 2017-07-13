@@ -1,6 +1,9 @@
 {
   "name": "art-auction",
   "version": "0.0.1",
+  "engines": {
+    "node": "7.10.1"
+  },
   "description": "A happy little skeleton.",
   "main": "index.js",
   "scripts": {
